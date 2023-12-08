@@ -27,6 +27,7 @@ def dictionarySwitch(stringInput):
     while index < len(stringInput):
         match = False
 
+        #Loops through each key in dictionary
         for word in numDictionary:
             #Matches characters to key in dictionary
             if stringInput[index:].startswith(word):
@@ -54,7 +55,7 @@ input.close()
 for string in inputLines:
     #Replaces alphanumeric numbers with digits
     newString = dictionarySwitch(string)
-
+    #Checks for digits in newString and assigns digits to list
     numbers = [char for char in newString if char.isdigit()]
 
     if len(numbers) == 1:
